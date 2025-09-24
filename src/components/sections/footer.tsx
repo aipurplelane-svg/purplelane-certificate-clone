@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1B23] rounded-t-[60px] text-gray-400 font-['Open_Sans'] pt-24 pb-12">
-      <div className="max-w-[1200px] mx-auto px-5">
+    <footer className="bg-[var(--color-footer-dark)] rounded-t-[40px] sm:rounded-t-[60px] text-gray-400 font-sans pt-16 sm:pt-24 pb-10 sm:pb-12">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-5">
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-8">
           <Link href="/">
@@ -16,22 +16,22 @@ const Footer = () => {
             />
           </Link>
           <div className="flex items-center gap-6">
-            <a href="https://www.linkedin.com/company/purplelane" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm">
+            <a href="https://www.linkedin.com/company/purplelane" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-xs sm:text-sm">
               <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1ea82f3e-e0ba-45f1-ba33-d1a132d902e6-purplelane-co-in/assets/svgs/61f9082050036c1e74489a72_linkedin-3.svg?" width={24} height={24} alt="Linkedin" />
               <span>LinkedIn</span>
             </a>
-            <a href="https://www.instagram.com/purplelane_edu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm">
+            <a href="https://www.instagram.com/purplelane_edu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-xs sm:text-sm">
               <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1ea82f3e-e0ba-45f1-ba33-d1a132d902e6-purplelane-co-in/assets/svgs/61f9082050036c47f3489a6c_instagram-4.svg?" width={24} height={24} alt="Instagram" />
               <span>Instagram</span>
             </a>
-            <a href="https://www.facebook.com/PurpleLaneEdu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm">
+            <a href="https://www.facebook.com/PurpleLaneEdu" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-xs sm:text-sm">
               <Image src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1ea82f3e-e0ba-45f1-ba33-d1a132d902e6-purplelane-co-in/assets/svgs/61f9082050036c1772489a6b_facebook-5.svg?" width={24} height={24} alt="Facebook" />
               <span>Facebook</span>
             </a>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
           <div>
             <h4 className="text-white text-base font-bold mb-4">Salur Branch</h4>
             <p className="text-sm leading-relaxed">19-184A, Dabbi Street, Salur, Andhra Pradesh 535591.</p>

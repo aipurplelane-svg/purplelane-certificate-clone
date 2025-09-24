@@ -3,24 +3,23 @@ import Image from "next/image";
 const HeroCertificate = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-[#6B46C1] via-[#5b39a3] to-[#4A23A0] font-sans text-white">
-      <div className="rounded-b-[100px]">
-        <div className="absolute top-[-50px] left-[-50px] w-[200px] h-[200px] bg-white/[.12] rounded-full z-0 pointer-events-none" />
+      <div className="rounded-b-[60px] sm:rounded-b-[100px]">
+        <div className="absolute top-[-50px] left-[-50px] w-[160px] h-[160px] bg-white/[.12] rounded-full z-0 pointer-events-none hidden sm:block" />
         <div className="absolute bottom-[-100px] right-[-100px] w-[200px] h-[200px] bg-white/[.12] rounded-full z-0 pointer-events-none" />
 
-        <section className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
+        <section className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-24">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-16">
             <div className="lg:w-[45%] text-center lg:text-left">
-              <p className="text-2xl text-white mb-6">
-                Congratualtions!{" "}
-                <b className="font-bold">Miriyala Uma Veerendranath</b> 🎉
-              </p>
-              <p className="text-2xl text-white mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 leading-tight">
+                Congratulations! <span className="font-extrabold">Miriyala Uma Veerendranath</span> 🎉
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-6 md:mb-8 leading-snug">
                 on achieving your Workshop Completion Certificate!
               </p>
               <a
                 href="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1ea82f3e-e0ba-45f1-ba33-d1a132d902e6-purplelane-co-in/assets/images/MiriyalaUmaVeerendranath_-2.jpg?"
                 download
-                className="inline-block bg-[#F97316] text-white rounded-lg text-base font-bold shadow-md hover:bg-orange-600 transition-colors py-4 px-8"
+                className="inline-flex w-full xs:w-auto sm:w-auto items-center justify-center bg-[#F97316] text-white rounded-lg text-sm sm:text-base font-bold shadow-md hover:bg-orange-600 transition-colors py-3 sm:py-4 px-6 sm:px-8"
               >
                 Download Certificate
               </a>

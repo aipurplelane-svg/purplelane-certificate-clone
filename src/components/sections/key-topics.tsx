@@ -36,23 +36,23 @@ const topicsData: TopicProps[] = [
 ];
 
 const TopicItem = ({ name, icon: Icon }: TopicProps) => (
-  <div className="flex items-center justify-between rounded-xl bg-white p-5 shadow-sm">
-    <div className="flex items-center gap-4">
-      <Icon className="h-6 w-6 flex-shrink-0 text-primary-purple" />
-      <h4 className="m-0 text-lg font-medium text-primary-purple">{name}</h4>
+  <div className="flex items-center justify-between rounded-xl bg-white p-4 sm:p-5 shadow-sm">
+    <div className="flex items-center gap-3 sm:gap-4">
+      <Icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-[var(--color-primary-purple)]" />
+      <h4 className="m-0 text-base sm:text-lg font-medium text-[var(--color-primary-purple)]">{name}</h4>
     </div>
-    <CheckCircle2 className="h-6 w-6 flex-shrink-0 text-success-green" />
+    <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-[var(--color-success-green)]" />
   </div>
 );
 
 const KeyTopics = () => {
   return (
-    <section className="bg-lavender py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[var(--color-lavender)] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-12 text-center text-3xl font-bold text-text-dark md:text-4xl">
+        <h2 className="mb-8 sm:mb-12 text-center text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
           Key Topics Covered
         </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {topicsData.map((topic) => (
             <TopicItem key={topic.name} name={topic.name} icon={topic.icon} />
           ))}
