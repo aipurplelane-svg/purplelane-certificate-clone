@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">
-            <Image src="/ccbp-logo-light.png" alt="CCBP" className="mb-4" />
+            <Image src="/ccbp-logo-light.png" alt="CCBP" className="mb-4" width={150} height={50} />
             <p className="text-neutral-gray text-sm">NxtWave CCBP 4.0</p>
           </div>
 
