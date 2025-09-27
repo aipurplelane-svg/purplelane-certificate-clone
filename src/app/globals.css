@@ -85,7 +85,7 @@
   --color-text-dark: #111827;
   --color-background-light: #F9FAFB;
   --color-success-green: #10B981;
-  --color-lavender: #EEF2FF; // Light indigo tint
+  --color-lavender: #EEF2FF; /* Light indigo tint */
   --color-footer-dark: #1F2937;
   --color-neutral-gray: #6B7280;
 
@@ -93,7 +93,7 @@
   --font-hero-subtitle: "Inter", sans-serif;
   --font-section-headers: "Inter", sans-serif;
   --font-topic-items: "Inter", sans-serif;
-  --font-body: "Inter", sans-serif; // Unified to Inter for modern consistency
+  --font-body: "Inter", sans-serif; /* Unified to Inter for modern consistency */
   --font-button: "Inter", sans-serif;
   --font-footer: "Inter", sans-serif;
 }

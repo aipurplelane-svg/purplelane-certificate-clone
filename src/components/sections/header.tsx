@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/Button";
-import Menu from "@/components/Menu";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="bg-white shadow-sm border-b border-gray-100">
+    <header className="bg-white shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-primary-indigo font-bold text-xl">CCBP Logo</Link>
         
@@ -22,9 +22,9 @@ const Header = () => {
           </Button>
         </div>
 
-        <Menu className="md:hidden text-primary-indigo h-6 w-6" />
+        <Menu className="md:hidden text-primary-indigo h-6 w-6 cursor-pointer" />
       </div>
-    </div>
+    </header>
   );
 };
 

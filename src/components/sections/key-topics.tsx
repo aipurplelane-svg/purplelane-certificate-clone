@@ -16,6 +16,7 @@ import {
   Presentation,
   CheckCircle2,
   Download,
+  Check,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 

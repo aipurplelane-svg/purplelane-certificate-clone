@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Download, Button, Link } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const HeroCertificate = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-primary-indigo to-purple-600 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-primary-indigo to-purple-600 overflow-hidden">
       <div className="absolute top-20 right-20 w-32 h-32 bg-accent-teal/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-20 left-20 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
 
@@ -34,11 +36,17 @@ const HeroCertificate = () => {
 
         <div className="lg:w-1/2 flex justify-center">
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-md w-full">
-            <Image src="/certificate.jpg" alt="Certificate" className="rounded-xl border-2 border-primary-indigo/20" />
+            <Image 
+              src="/certificate.jpg" 
+              alt="AI Workshop Certificate for Miriyala Uma Veerendranath" 
+              width={400} 
+              height={300}
+              className="rounded-xl border-2 border-primary-indigo/20 w-full h-auto" 
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
