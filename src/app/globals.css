@@ -1,3 +1,4 @@
+/* Updated: 2025-09-27T14:23:05.434Z */
 /* Updated: 2025-09-27T04:52:30.399Z */
 /* Updated: 2025-09-24T10:32:33.558Z */
 /* Updated: 2025-09-24T06:57:28.266Z */
@@ -77,24 +78,24 @@
     }
   }
 
-  /* Custom Design Tokens */
-  --color-primary-purple: #6B46C1;
-  --color-accent-orange: #F97316;
+  /* Custom Design Tokens - Updated for CCBP Style */
+  --color-primary-indigo: #4F46E5;
+  --color-accent-teal: #0D9488;
   --color-text-white: #FFFFFF;
-  --color-text-dark: #1F2937;
-  --color-background-light: #F8FAFC;
+  --color-text-dark: #111827;
+  --color-background-light: #F9FAFB;
   --color-success-green: #10B981;
-  --color-lavender: #E9D5FF;
-  --color-footer-dark: #1A1B23;
+  --color-lavender: #EEF2FF; // Light indigo tint
+  --color-footer-dark: #1F2937;
   --color-neutral-gray: #6B7280;
 
   --font-hero-title: "Inter", sans-serif;
   --font-hero-subtitle: "Inter", sans-serif;
   --font-section-headers: "Inter", sans-serif;
   --font-topic-items: "Inter", sans-serif;
-  --font-body: "Open Sans", sans-serif;
+  --font-body: "Inter", sans-serif; // Unified to Inter for modern consistency
   --font-button: "Inter", sans-serif;
-  --font-footer: "Open Sans", sans-serif;
+  --font-footer: "Inter", sans-serif;
 }
 
 /*
@@ -209,7 +210,7 @@
     font-size: 1.125rem; /* Topic Items: 18px */
     font-weight: 500;
     font-family: var(--font-topic-items);
-    color: var(--color-primary-purple);
+    color: var(--color-primary-indigo);
   }
 
   p {
