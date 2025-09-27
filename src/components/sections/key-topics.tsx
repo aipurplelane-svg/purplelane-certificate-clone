@@ -36,7 +36,7 @@ const topicsData: TopicProps[] = [
 ];
 
 const TopicItem = ({ name, icon: Icon }: TopicProps) => (
-  <div className="flex items-center justify-between rounded-xl bg-white p-4 sm:p-5 shadow-sm">
+  <div className="flex items-center justify-between rounded-xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-black/5 transition-all hover:shadow-md hover:-translate-y-0.5">
     <div className="flex items-center gap-3 sm:gap-4">
       <Icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-[var(--color-primary-purple)]" />
       <h4 className="m-0 text-base sm:text-lg font-medium text-[var(--color-primary-purple)]">{name}</h4>
@@ -49,7 +49,7 @@ const KeyTopics = () => {
   return (
     <section className="bg-[var(--color-lavender)] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="mb-8 sm:mb-12 text-center text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+        <h2 className="mb-8 sm:mb-12 text-center text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] tracking-tight">
           Key Topics Covered
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
