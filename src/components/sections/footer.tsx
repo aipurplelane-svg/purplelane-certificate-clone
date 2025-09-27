@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -25,21 +25,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex space-x-4">
-            <Link href="#" className="w-10 h-10 bg-primary-indigo/20 rounded-lg flex items-center justify-center hover:bg-accent-teal transition-colors">
-              <Linkedin className="h-5 w-5" />
-            </Link>
-            <Link href="#" className="w-10 h-10 bg-primary-indigo/20 rounded-lg flex items-center justify-center hover:bg-accent-teal transition-colors">
-              <Image src="/instagram-icon.png" alt="Instagram" className="h-5 w-5" />
-            </Link>
-            <Link href="#" className="w-10 h-10 bg-primary-indigo/20 rounded-lg flex items-center justify-center hover:bg-accent-teal transition-colors">
-              <Image src="/facebook-icon.png" alt="Facebook" className="h-5 w-5" />
-            </Link>
+          <div className="flex justify-end space-x-4 mb-8">
+            <a href="#" className="text-white hover:text-teal-300 transition"><Linkedin size={24} /></a>
+            <a href="#" className="text-white hover:text-teal-300 transition"><Instagram size={24} /></a>
+            <a href="#" className="text-white hover:text-teal-300 transition"><Facebook size={24} /></a>
           </div>
         </div>
 
         <div className="border-t border-neutral-gray/20 pt-6 text-center text-sm text-neutral-gray">
-          &copy; 2025 CCBP. All rights reserved.
+          <p className="text-sm text-gray-400 text-center mt-8">© 2025 NxtWave CCBP. All rights reserved.</p>
         </div>
       </div>
     </footer>

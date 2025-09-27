@@ -1,108 +1,31 @@
 "use client";
 
 import React from 'react';
-import {
-  Palette,
-  Ruler,
-  Users,
-  Lightbulb,
-  Library,
-  Smartphone,
-  Laptop,
-  PenTool,
-  Blocks,
-  LayoutGrid,
-  PieChart,
-  Presentation,
-  CheckCircle2,
-  Download,
-  Check,
-} from 'lucide-react';
-import { motion } from 'framer-motion';
-
-interface TopicProps {
-  name: string;
-  icon: React.ElementType;
-}
-
-const topicsData: TopicProps[] = [
-  { name: 'Visual Design Principles', icon: Palette },
-  { name: 'Style Guidelines', icon: Ruler },
-  { name: 'Color Theory', icon: Palette },
-  { name: 'UI Design Principles', icon: Ruler },
-  { name: 'UI Elements', icon: Blocks },
-  { name: 'UI Patterns', icon: LayoutGrid },
-  { name: 'User Research', icon: Users },
-  { name: 'Analyzing', icon: PieChart },
-  { name: 'Brain Storming', icon: Lightbulb },
-  { name: 'Design System', icon: Library },
-  { name: 'Prototype', icon: Smartphone },
-  { name: 'Testing', icon: Laptop },
-];
-
-const TopicItem = ({ name, icon: Icon }: TopicProps) => (
-  <motion.div
-    initial={{ opacity: 0, x: -20 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.4 }}
-    whileHover={{ x: 5 }}
-    className="flex items-center gap-4 p-6 border-l-4 border-[var(--color-accent-orange)] bg-white rounded-r-lg shadow-sm hover:shadow-md transition-all"
-  >
-    <div className="flex-shrink-0">
-      <Icon size={24} className="text-[var(--color-primary-purple)]" />
-    </div>
-    <div className="flex-1">
-      <h4 className="text-lg font-semibold text-[var(--color-text-dark)]">{name}</h4>
-    </div>
-    <CheckCircle2 size={24} className="text-[var(--color-success-green)] flex-shrink-0" />
-  </motion.div>
-);
+import Image from "next/image";
+import { CheckCircle } from "lucide-react";
 
 const KeyTopics = () => {
-  return (
-    <section className="py-16 bg-lavender">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-4">
-          Key Topics Covered
-        </h2>
-        <p className="text-lg text-neutral-gray mb-12 max-w-2xl mx-auto">
-          Essential skills from the AI Workshop
-        </p>
+  const topics = [
+    "Explore the Generative AI Landscape",
+    "Understand Opportunities and Investments",
+    "Discover Applications and Demonstrations",
+    "Dive into Architecture and Building Blocks",
+    "Gain High-Level Understanding of AI",
+    "Develop, Test, and Deploy your Model",
+    "Build your AI Avatar from scratch"
+  ];
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-primary-indigo/10">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-success-green rounded-full flex items-center justify-center">
-                <Check className="h-4 w-4 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-primary-indigo">
-                Generative AI Landscape
-              </h4>
+  return (
+    <section id="about" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center mb-12 text-4xl font-bold text-gray-800">What will you learn?</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {topics.map((topic, index) => (
+            <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+              <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={24} />
+              <p className="text-lg text-gray-700">{topic}</p>
             </div>
-            <p className="text-neutral-gray text-sm">Understand opportunities and applications</p>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-primary-indigo/10">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-success-green rounded-full flex items-center justify-center">
-                <Check className="h-4 w-4 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-primary-indigo">
-                Generative AI Landscape
-              </h4>
-            </div>
-            <p className="text-neutral-gray text-sm">Understand opportunities and applications</p>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-primary-indigo/10">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-success-green rounded-full flex items-center justify-center">
-                <Check className="h-4 w-4 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-primary-indigo">
-                Generative AI Landscape
-              </h4>
-            </div>
-            <p className="text-neutral-gray text-sm">Understand opportunities and applications</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,129 +1,109 @@
 "use client";
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, User } from "lucide-react";
+import Image from "next/image";
+import Link from 'next/link';
 
 const ProgramRoadmap = () => {
-  const steps = [
-    {
-      icon: CheckCircle,
-      title: 'UI/UX Fundamentals',
-      description: 'Master the basics of user interface and experience design principles.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Research & Analysis',
-      description: 'Conduct user research, analysis, and brainstorming for effective designs.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Design Principles',
-      description: 'Explore visual design, color theory, style guidelines, and design systems.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'UI Elements & Patterns',
-      description: 'Learn core UI components, patterns, and best practices for intuitive interfaces.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Prototyping & Testing',
-      description: 'Build prototypes and conduct testing to refine and validate your designs.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Portfolio Building',
-      description: 'Create a professional portfolio showcasing your UI/UX projects.',
-    },
-    {
-      title: 'Land on your Dream Job',
-      isFinal: true,
-    },
+  const tools = ["LLM", "Langchain", "Gradio", "PlayHT", "Hugging Face", "Google Colab", "Vector Database"];
+  
+  const benefits = [
+    "Understand LLM Fundamentals and Applications",
+    "Master AI Tools like ChatGPT & Midjourney",
+    "Become Fluent in Essential AI Terms",
+    "Develop Must-Have AI Skills for Students",
+    "Build and Deploy Your Own AI Model",
+    "Step-by-Step Guide to Advance Your AI Knowledge in College",
+    "Explore Generative AI's Transformation across Industries",
+    "Increase Internship Chances with Advanced AI Skills",
+    "Learn AI Skills Companies are Seeking",
+    "Elevate Your Career with Mastered AI Skills"
   ];
 
   return (
-    <section className="py-16 bg-background-light">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-dark mb-4">
-            Visual & UI/UX Mastery
-          </h2>
-          <p className="text-lg text-neutral-gray max-w-3xl mx-auto">
-            Program description adapted to AI workshop insights
-          </p>
-        </div>
-
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary-indigo"></div>
-          
-          <div className="space-y-8">
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  1
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">Fundamentals</h4>
-                <p className="text-neutral-gray">AI Basics</p>
+    <div>
+      <section id="tools" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center mb-12 text-4xl font-bold text-gray-800">Tools and Technologies You'll Master</h2>
+          <div className="tools-grid max-w-6xl mx-auto">
+            {tools.map((tool, index) => (
+              <div key={index} className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg">
+                <Image
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/1ea82f3e-e0ba-45f1-ba33-d1a132d902e6/generated_images/set-of-icons-for-ai-workshop-topics%3a-l-be369fd7-20250927151022.jpg?"
+                  alt={`${tool} Icon`}
+                  width={80}
+                  height={80}
+                  className="mx-auto mb-4"
+                />
+                <p className="font-semibold text-indigo-700">{tool}</p>
               </div>
-            </div>
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  2
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">Research & Analysis</h4>
-                <p className="text-neutral-gray">User Research, Analysis, Brainstorming</p>
-              </div>
-            </div>
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  3
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">Design Principles</h4>
-                <p className="text-neutral-gray">Visual Design, Color Theory, Style Guidelines</p>
-              </div>
-            </div>
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  4
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">UI Elements & Patterns</h4>
-                <p className="text-neutral-gray">Core Components, Patterns, Best Practices</p>
-              </div>
-            </div>
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  5
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">Prototyping & Testing</h4>
-                <p className="text-neutral-gray">Build Prototypes, Conduct Testing</p>
-              </div>
-            </div>
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  6
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">Portfolio Building</h4>
-                <p className="text-neutral-gray">Professional Portfolio Creation</p>
-              </div>
-            </div>
-            <div className="flex items-center relative">
-              <div className="w-1/2 text-right pr-8">
-                <div className="bg-accent-teal text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  7
-                </div>
-                <h4 className="text-primary-indigo font-semibold mb-2">Land on your Dream Job</h4>
-                <p className="text-neutral-gray">Career Success & Placement</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="py-20 bg-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">Learn from the Legend</h2>
+            <p className="text-lg text-gray-600 mb-8">who trained 1,00,000+ individuals!</p>
+            <div className="max-w-md mx-auto">
+              <Image
+                src="/instructor-placeholder.jpg" // Placeholder; generate if needed
+                alt="Abhinav Devaguptapu"
+                width={200}
+                height={200}
+                className="rounded-full mx-auto mb-4 shadow-lg"
+              />
+              <h3 className="text-2xl font-semibold text-gray-800">Abhinav Devaguptapu</h3>
+              <p className="text-indigo-600 font-medium">Curriculum Development Manager at NxtWave</p>
+              <p className="text-gray-600 mt-2">Abhinav brings over 7 years of expertise in training professionals from DRDO, the Indian Army, and Universities.</p>
+            </div>
+            <p className="text-xl font-semibold mt-8 text-red-600">Limited seats</p>
+            <Link href="https://accounts.ccbp.in/register/ai-workshop" className="cta-button mt-6 inline-block">
+              Book Now
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center mb-12 text-4xl font-bold text-gray-800">Why be just an AI User When you can become an AI Pioneer</h2>
+          <ul className="benefits-list max-w-4xl mx-auto space-y-2">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="text-lg text-gray-700">
+                {benefit}
+              </li>
+            ))}
+          </ul>
+          <div className="text-center mt-12">
+            <Link href="https://accounts.ccbp.in/register/ai-workshop" className="cta-button inline-block">
+              Book Your Seat Now
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-center mb-12 text-4xl font-bold text-gray-800">Our Workshops Set New Standards</h2>
+          <p className="text-xl text-gray-600 text-center leading-relaxed">
+            Build your first generative AI application using Character AI. Explore various assistants and characters to understand the capabilities and potential of generative AI.
+            <br /><br />
+            Character Assistant: Your AI work/study buddy
+            <br />
+            Lily: Your friendly AI assistant
+          </p>
+          <div className="text-center mt-12">
+            <Link href="https://accounts.ccbp.in/register/ai-workshop" className="cta-button inline-block">
+              Book Your Seat Now
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
