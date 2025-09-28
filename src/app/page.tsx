@@ -5,6 +5,7 @@ import ProgramRoadmap from "@/components/sections/program-roadmap";
 import Footer from "@/components/sections/footer";
 import MouPartners from "@/components/sections/mou-partners";
 import SuccessStories from "@/components/sections/success-stories";
+import HiringPartners from "@/components/sections/hiring-partners";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ProgramRoadmap />
         <MouPartners />
         <SuccessStories />
+        <HiringPartners />
       </main>
       <Footer />
     </div>
