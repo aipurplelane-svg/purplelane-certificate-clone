@@ -36,12 +36,12 @@ const topicsData: TopicProps[] = [
 ];
 
 const TopicItem = ({ name, icon: Icon }: TopicProps) => (
-  <div className="flex items-center justify-between rounded-xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-black/5 transition-all hover:shadow-md hover:-translate-y-0.5">
-    <div className="flex items-center gap-3 sm:gap-4">
-      <Icon className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-[var(--color-primary-purple)]" />
-      <h4 className="m-0 text-base sm:text-lg font-medium text-[var(--color-primary-purple)]">{name}</h4>
+  <div className="flex items-center gap-3 py-2">
+    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-accent-orange)]">
+      <Icon className="h-3 w-3 text-white flex-shrink-0" />
     </div>
-    <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 text-[var(--color-success-green)]" />
+    <span className="flex-1 text-sm font-medium text-[var(--color-text-dark)]">{name}</span>
+    <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-[var(--color-success-green)]" />
   </div>
 );
 
@@ -52,7 +52,7 @@ const KeyTopics = () => {
         <h2 className="mb-8 sm:mb-12 text-center text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] tracking-tight">
           Key Topics Covered
         </h2>
-        <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="space-y-3 max-w-2xl mx-auto">
           {topicsData.map((topic) => (
             <TopicItem key={topic.name} name={topic.name} icon={topic.icon} />
           ))}
