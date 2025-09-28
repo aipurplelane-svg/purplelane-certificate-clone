@@ -4,6 +4,7 @@ import KeyTopics from "@/components/sections/key-topics";
 import ProgramRoadmap from "@/components/sections/program-roadmap";
 import Footer from "@/components/sections/footer";
 import MouPartners from "@/components/sections/mou-partners";
+import SuccessStories from "@/components/sections/success-stories";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <KeyTopics />
         <ProgramRoadmap />
         <MouPartners />
+        <SuccessStories />
       </main>
       <Footer />
     </div>
